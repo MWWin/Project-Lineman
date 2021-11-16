@@ -1,0 +1,43 @@
+.like-dislike{
+    color: black;
+}
+
+.like:hover .like-dislike{
+    color: rgb(9, 212, 60);
+}
+
+.dislike:hover .like-dislike{
+    color: rgb(9, 212, 60);
+}
+
+.img-like{
+    content: url(../img/like.png);
+}
+
+.like:hover .img-like{
+    content: url(../img/like-after.png);
+}
+
+.img-like.active{
+    content: url(../img/like-after.png);
+}
+
+.img-dislike{
+    content: url(../img/dislike.png);
+}
+
+.dislike:hover .img-dislike{
+    content: url(../img/dislike-after.png);
+}
+
+.img-dislike.active{
+    content: url(../img/dislike-after.png);
+}
+
+.text-like.active{
+    color: rgb(9, 212, 60) !important;
+}
+
+.text-dislike.active{
+    color: rgb(9, 212, 60) !important;
+}
