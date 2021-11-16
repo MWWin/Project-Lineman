@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title> LINE MAN | สั่งอาหาร แท็กซี่ ส่งพัสดุ แมสเซนเจอร์ ซื้อของ</title>
+    <!-- ใส่ icon ของ title -->
+    <link rel="icon" href="img/lineman-icon.png" type="image/icon type">
+    <!-- ใส่ icon ของ title -->
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <!-- font -->
+
+
+    <style>
+        #navbarNavDropdown {
+            font-size: 20px;
+        }
+
+        body {
+            /* font-family: 'Montserrat', sans-serif; */
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding-top: 9px;
+            padding-left: 37px;
+            font-size: 17px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            color: green;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            color: green;
+        }
+
+        .covid :hover {
+            text-decoration: underline;
+            text-decoration-color: grey;
+            /* -webkit-text-decoration-color: black; */
+        }
+
+
+
+
+        /* order */
+        .btn-order {
+            background-color: #0fc862;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn-order:hover {
+            background-color: #dcdcdc;
+            color: #5e5e5e;
+        }
+
+        /* order */
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light navbar-expand-lg" style="height: 100px;">
+        <div class="container-fluid">
+            <!-- navbar logo ซ้ายสุด -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/lineman-icon.png" alt="" width="35" height="35" class="d-inline-block align-text-top"
+                    style="position: relative; top: -5px; left: 20px;">
+                <strong
+                    style="font-size: 30px; color: #0fc862; position: relative; left: 25px; top: 3px;">LINEMAN</strong>
+            </a>
+            <!-- navbar logo ซ้ายสุด -->
+
+
+            <!-- btn กรณีลดขนาดหน้าจอ จะเกิดขีด 3 ขีด-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- btn กรณีลดขนาดหน้าจอจะเกิดขีด 3 ขีด -->
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown" style="position: relative; left: 150px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"
+                            style="font-size: 17px; color: green;"><b>หน้าหลัก</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropbtn"><b>บริการ</b></button>
+                            <div class="dropdown-content">
+                                <a href="#">สั่งอาหาร</a>
+                                <a href="#">เรียกแท็กซี่</a>
+                                <a href="#">เมสเซนเจอร์</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropbtn"><b>พาร์ทเนอร์</b></button>
+                            <div class="dropdown-content">
+                                <a href="#">เปิดร้านอาหาร</a>
+                                <a href="#">สมัครขับไลน์แมน</a>
+                                <a href="#">ร่วมเป็นพันธมิตรทางธุรกิจ</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="dropbtn"><b>ศูนย์ความช่วยเหลือ</b></button>
+                            <div class="dropdown-content">
+                                <a href="#">สั่งอาหาร</a>
+                                <a href="#">เรียกแท็กซี่</a>
+                                <a href="#">ส่งพัสดุ</a>
+                                <a href="#">แมสเซนเจอร์</a>
+                                <a href="#">สั่งของสะดวกซื้อ</a>
+                                <a href="#">สั่งของซูเปอร์</a>
+                                <a href="#">พาร์ทเนอร์ของเรา</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#"
+                            style="font-size: 17px; color: black; padding-left: 37px;"><b>คำถามยอดนิยม</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+
+    <!-- covid box -->
+    <div class="covid text-center" style="height: 125px; background-color: #e02c44;">
+        <a href="https://lineman.line.me/covid/?utm_source=lineman-homepage" class="text-white"
+            style="font-size: 30px; position: relative; top: 20px; text-decoration: none;" target="_blank">
+            <b>LINE MAN เพิ่มมาตรการสู้ COVID-19!<br>เพิ่มความปลอดภัยในการรับ-ส่งอาหารเพื่อคุณ <u>คลิกอ่าน</u>></b>
+        </a>
+    </div>
+    <!-- covid box -->
+
+    <!-- mid content -->
+    <div class="middle-content" style="height: 832px;">
+
+    </div>
+    <!-- mid content -->
+
+
+    <!-- box content under -->
+    <div class="under text-white text-center"
+        style="height: 220px; background-color: #383c4c; font-size: 30px; padding-top: 38px;">
+        <p><b>แอปพลิเคชั่น LINE MAN ตอบโจทย์ทุกความต้องการ<br>ด้วย 6 บริการหลัก
+                ระดับมืออาชีพ<br>ที่จะคอยช่วยเหลือได้ทุกเมื่อที่คุณต้องการ</b></p>
+    </div>
+    <!-- box content under -->
+
+
+    <!-- order class column -->
+    <div class="container-fluid">
+        <br><br><br>
+        <!-- first -->
+        <div class="row">
+            <div class="col-xxl-6 d-flex justify-content-end order-sm-12">
+                <div class="box" style="width: 593px;">
+                    <img src="img/first.png" alt="sirst" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-xxl-6 order-sm-1">
+                <div class="d-flex" style="width: 593px; height: 100%;">
+                    <div class="p-4 align-self-center">
+                        <p style="font-size: 300%;color: #1c1c4c;">FOOD DELIVERY</p>
+                        <p style="font-size: 150%; color: #0fc862;"><b>บริการสั่งอาหาร</b></p>
+                        <p style="font-size: 150%;"><b>สั่งอาหารร้านเด็ดกว่า 100,000 ร้านทั่ว กรุงเทพฯ ทุกที่
+                                ทุกเวลา</b></p>
+                        <button class="p-2 btn-order" style="width: 188px; font-size: 200%;"
+                            onclick="window.location.href='https://www.google.co.th/';">รายละเอียด</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- first -->
+
+        <!-- sec -->
+        <div class="row">
+            <div class="col-xxl-6 d-flex justify-content-start order-lg-2">
+                <div class="box" style="width: 593px;">
+                    <img src="img/sec.png" alt="sirst" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-xxl-6 order-lg-1">
+                <div class="d-flex" style="width: 593px; height: 100%;">
+                    <div class="p-4 align-self-center">
+                        <p style="font-size: 300%;color: #1c1c4c;">LINE MAN TAXI</p>
+                        <p style="font-size: 150%; color: #0fc862;"><b>บริการเรียกแท็กซี่</b></p>
+                        <p style="font-size: 150%;"><b>เรียกรถแท็กซี่มารับเพื่อไปส่งยังจุดหมายของคุณอย่างปลอดภัย</b></p>
+                        <button class="p-2 btn-order" style="width: 188px; font-size: 200%;"
+                            onclick="window.location.href='https://www.google.co.th/';">รายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sec -->
+
+        <!-- 3 -->
+        <div class="row">
+            <div class="col-xxl-6 d-flex justify-content-end">
+                <div class="box" style="width: 593px;">
+                    <img src="img/third.png" alt="sirst" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-xxl-6">
+                <div class="d-flex" style="width: 593px; height: 100%;">
+                    <div class="p-4 align-self-center">
+                        <p style="font-size: 300%;color: #1c1c4c;">PARCEL</p>
+                        <p style="font-size: 150%; color: #0fc862;"><b>บริการส่งพัสดุ</b></p>
+                        <p style="font-size: 150%;"><b>เข้ารับพัสดุถึงบ้าน และส่งถึงจุดหมายทั่วประเทศ</b></p>
+                        <button class="p-2 btn-order" style="width: 188px; font-size: 200%;"
+                            onclick="window.location.href='https://www.google.co.th/';">รายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+
+        <!-- 4 -->
+        <div class="row">
+            <div class="col-xxl-6 d-flex justify-content-start order-lg-2">
+                <div class="box" style="width: 593px;">
+                    <img src="img/4.png" alt="sirst" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-xxl-6 order-lg-1">
+                <div class="d-flex" style="width: 593px; height: 100%;">
+                    <div class="p-4 align-self-center">
+                        <p style="font-size: 300%;color: #1c1c4c;">MESSENGER</p>
+                        <p style="font-size: 150%; color: #0fc862;"><b>บริการเมสเซนเจอร์</b></p>
+                        <p style="font-size: 150%;"><b>ส่งของด่วน ส่งเอกสาร วางบิล เรียกใช้ได้ทุกเมื่อที่ต้องการ</b></p>
+                        <button class="p-2 btn-order" style="width: 188px; font-size: 200%;"
+                            onclick="window.location.href='https://www.google.co.th/';">รายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4 -->
+
+        <!-- 5 -->
+        <div class="row">
+            <div class="col-xxl-6 d-flex justify-content-end">
+                <div class="box" style="width: 593px;">
+                    <img src="img/5.png" alt="sirst" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-xxl-6">
+                <div class="d-flex" style="width: 593px; height: 100%;">
+                    <div class="p-4 align-self-center">
+                        <p style="font-size: 300%;color: #1c1c4c;">CONVENIENCE</p>
+                        <p style="font-size: 150%; color: #0fc862;"><b>บริการซื้อของสะดวกซื้อ</b></p>
+                        <p style="font-size: 150%;"><b>ส่งตรงสินค้าจากร้านสะดวกซื้อถึงหน้าประตูคุณ</b></p>
+                        <button class="p-2 btn-order" style="width: 188px; font-size: 200%;"
+                            onclick="window.location.href='https://www.google.co.th/';">รายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 5 -->
+
+
+        <!-- 6 -->
+        <div class="row">
+            <div class="col-xxl-6 d-flex justify-content-start order-lg-2">
+                <div class="box" style="width: 593px;">
+                    <img src="img/6.png" alt="sirst" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-xxl-6 order-lg-1">
+                <div class="d-flex" style="width: 593px; height: 100%;">
+                    <div class="p-4 align-self-center">
+                        <p style="font-size: 300%;color: #1c1c4c;">MART</p>
+                        <p style="font-size: 150%; color: #0fc862;"><b>บริการสั่งของจากซูเปอร์ ส่งตรงถึงบ้านคุณ</b></p>
+                        <p style="font-size: 150%;"><b>สั่งล่วงหน้า หรือสั่งตอนนี้ เราก็พร้อมส่งสินค้าจากซูเปอร์มาร์เก็ต
+                                ให้คุณได้ตามนัด</b></p> </b></p>
+                        <button class="p-2 btn-order" style="width: 188px; font-size: 200%;"
+                            onclick="window.location.href='https://www.google.co.th/';">รายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 6 -->
+    </div>
+    <!-- order class column -->
+
+
+
+    <!-- before foot -->
+
+    <!-- before foot -->
+</body>
+
+</html>
